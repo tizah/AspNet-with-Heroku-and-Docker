@@ -17,5 +17,5 @@ RUN dotnet publish "AspNet-with-Heroku-and-Docker.csproj" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "AspNet-with-Heroku-and-Docker.dll"]
+CMD ["dotnet", "AspNet-with-Heroku-and-Docker.dll"]
 
